@@ -4,7 +4,7 @@
 pip3 install install git+https://github.com/tinhien11/har2tests.git --user
 ```
 ### Save .har file from Chrome
-![](/img1.jpg?raw=true "")
+![](/img1.png?raw=true "")
 
 
 ### Convert .har file to test file
