@@ -14,7 +14,7 @@ if sys.version_info < (3, 4):
 
 setup(
         name='har2tests',
-        version='1.0.0',
+        version='1.0.8',
         description='A python framework for getting useful stuff out of HAR files',
         long_description='',
         author='',

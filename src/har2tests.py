@@ -4,6 +4,9 @@ import sys
 import autopep8
 from haralyzer import HarParser
 
+def main():
+    pass
+
 har_file = sys.argv[1]
 
 with open(har_file, 'r') as f:

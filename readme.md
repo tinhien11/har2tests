@@ -1,7 +1,7 @@
 # Convert .har file to unittest
 ## Install
 ```bash
-pip3 install install git+https://github.com/tinhien11/har2tests.git --user
+pip3 install git+https://github.com/tinhien11/har2tests.git --user
 ```
 ### Save .har file from Chrome
 ![](/img1.png?raw=true "")
