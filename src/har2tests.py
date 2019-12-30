@@ -26,7 +26,7 @@ class TestRequest(unittest.TestCase):
 har_page = har_parser.pages[0]
 entries = har_page.filter_entries(content_type='application/json')
 for entry in entries:
-    if 'websocket' in entry['response']['content']['text']:
+    if 'websocket' in entry['response']['content'].get('text', ''):
         continue
 
     request_el = entry['request']
@@ -42,7 +42,7 @@ for entry in entries:
     headers = dict((d['name'], d['value']) for d in request_el['headers'])
     call_code = '''
     def test_request{count}(self):
-        response = requests.{method}('{url}', data={data}, headers={headers})        
+        response = requests.{method}('{url}', json={data}, headers={headers})        
         self.assertEqual(response.status_code, {status_code})
         self.assertEqual(len(response.content), {response})
     '''.format(method=method, url=url, data=data,
